@@ -297,6 +297,8 @@ var D3graph = (function() {
 			var cursorX = d3.mouse(this)[0];
 			var markX = mark.attr('x');
 			xDiff = cursorX - markX;
+
+			console.log("drag started");
 		})
 		.on('drag', function() {
 			var focusX = d3.mouse($('#focus')[0])[0];
@@ -314,7 +316,9 @@ var D3graph = (function() {
 			clinicianNotes.notes[currNote].Date = mgFocus.x.invert(mark.attr('x'));
 			var dateString = getDateString(clinicianNotes.notes[currNote].Date);
 			$('#ni-' + id + ' h6').html(dateString);
-			// console.log(clinicianNotes.notes[currNote].Date);
+			
+			//console.log(clinicianNotes.notes[currNote].Date);
+			
 			$('#ni-' + id).css('left', (Math.round(mark.attr('x')) + 3) + 'px')/*.show()*/;	// ALERT: This may cause a problem
 			submitNotes();
 		});
@@ -1207,6 +1211,7 @@ var D3graph = (function() {
 					clinicianNotes.notes.push(initialData[i].results.notes[m]);
 				}
 				for (var m = 0; m < clinicianNotes.notes.length; m++) {
+					if (! (clinicianNotes.notes[m].Date instanceof Date)) //Check if date has been parsed already
 					clinicianNotes.notes[m].Date = parseDate(clinicianNotes.notes[m].Date);
 				}
 				// console.log(clinicianNotes);

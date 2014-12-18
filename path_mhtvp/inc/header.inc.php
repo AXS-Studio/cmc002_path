@@ -27,7 +27,7 @@ $page = $uri[$uriLength - 1];
 			}
 			
             </script>
-			<h1><strong>PATH</strong></h1>
+			<h1><strong>PATH-MHTV</strong></h1>
 			<form>
 				<label>Welcome <?php
 if (checkAdmin()) 

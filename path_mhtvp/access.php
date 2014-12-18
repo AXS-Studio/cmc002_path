@@ -6,7 +6,7 @@
 session_start();
 require_once('database/create_list.php');
  
-$title = 'PATH';
+$title = 'PATH-MHTV';
 
 include('inc/head.inc.php');
 ?>

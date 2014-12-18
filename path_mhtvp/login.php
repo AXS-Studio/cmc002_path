@@ -13,7 +13,7 @@ if (checkLogin()) {
 	exit;
 }
 
-$title = 'Welcome to PATH';
+$title = 'Welcome to PATH-MHTV';
 
 include('inc/head.inc.php');
 
@@ -26,12 +26,12 @@ if (isset($_SESSION['error'])) {
 	<body class="login">
 		<div id="wrapper">
 			<header>
-				<h1><strong>P</strong>hysician <strong>A</strong>ccess to <strong>T</strong>elemetry from <strong>H</strong>andhelds</h1>
+				<h1><strong>P</strong>hysician <strong>A</strong>ccess to <strong>T</strong>elemetry from <strong>H</strong>andhelds - MHTV</h1>
 				<img src="images/logo_sunnybrook_research_institute.gif" alt="Sunnybrook Research Institute" width="189" height="47">
 			</header>
 			<div class="minHeight" id="mh">
 				<article class="loginBox">
-					<h2>Welcome to <strong>PATH</strong></h2>
+					<h2>Welcome to <strong>PATH-MHTV</strong></h2>
 					<p class="alert o0" id="alert-user" style="display: none;">Your <strong>SHSC ID</strong> is incorrect. Please re-enter it.</p>
 					<p class="alert o0" id="alert-pass" style="display: none;">Your <strong>password</strong> is incorrect. Please re-enter it.</p>
 					<p class="alert o0" id="alert-dontMatch" style="display: none;">Your <strong>SHSC ID</strong> and <strong>password</strong> don’t match. Please try again.</p>

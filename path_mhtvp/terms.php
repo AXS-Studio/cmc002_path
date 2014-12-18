@@ -1,7 +1,7 @@
 <?php
 session_start();
  
-$title = 'PATH';
+$title = 'PATH-MHTV';
 
 include('inc/head.inc.php');
 ?>
